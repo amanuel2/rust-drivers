@@ -8,6 +8,18 @@
 //! C header: [`include/linux/jiffies.h`](srctree/include/linux/jiffies.h).
 //! C header: [`include/linux/ktime.h`](srctree/include/linux/ktime.h).
 
+#[allow(unused_imports)]
+pub use bindings::timer_list;
+
+#[allow(unused_imports)]
+pub use bindings::init_timer_key;
+
+#[allow(unused_imports)]
+pub use bindings::mod_timer;
+
+#[allow(unused_imports)]
+pub use bindings::hlist_node;
+
 /// The number of nanoseconds per millisecond.
 pub const NSEC_PER_MSEC: i64 = bindings::NSEC_PER_MSEC as i64;
 
