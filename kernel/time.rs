@@ -8,6 +8,7 @@
 //! C header: [`include/linux/jiffies.h`](srctree/include/linux/jiffies.h).
 //! C header: [`include/linux/ktime.h`](srctree/include/linux/ktime.h).
 
+
 #[allow(unused_imports)]
 pub use bindings::timer_list;
 
@@ -19,6 +20,30 @@ pub use bindings::mod_timer;
 
 #[allow(unused_imports)]
 pub use bindings::hlist_node;
+
+#[allow(unused_imports)]
+pub use bindings::hrtimer;
+
+#[allow(unused_imports)]
+pub use bindings::hrtimer_init;
+
+#[allow(unused_imports)]
+pub use bindings::hrtimer_start_range_ns;
+
+#[allow(unused_imports)]
+pub use bindings::timerqueue_node;
+
+#[allow(unused_imports)]
+pub use bindings::CLOCK_MONOTONIC;
+
+#[allow(unused_imports)]
+pub use bindings::hrtimer_mode_HRTIMER_MODE_REL as HRTIMER_MODE_REL;
+
+#[allow(unused_imports)]
+pub use bindings::hrtimer_restart;
+
+#[allow(unused_imports)]
+pub use bindings::hrtimer_cancel;
 
 /// The number of nanoseconds per millisecond.
 pub const NSEC_PER_MSEC: i64 = bindings::NSEC_PER_MSEC as i64;
@@ -93,3 +118,4 @@ impl core::ops::Sub for Ktime {
         }
     }
 }
+
